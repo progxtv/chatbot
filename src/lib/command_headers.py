@@ -8,6 +8,17 @@ commands = {
         'return': 'command'
     },
 
+    # Simple commands
+    '!keyboard': {
+        'limit': 30,
+        'return': 'ProgX uses a CMStorm QuickFire Rapid with Brown Switches.'
+    },
+
+    '!mouse': {
+        'limit': 30,
+        'return': 'ProgX uses a Logitech G500.'
+    },
+
 }
 
 for channel in config['channels']:
