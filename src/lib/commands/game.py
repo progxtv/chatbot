@@ -3,6 +3,9 @@
 
 Developed by Gustavo Valdez Santiago <contacto@gustavovaldezsan.com>
 """
+
+# coding: utf8
+
 from urllib2 import Request, urlopen, URLError
 import json
 import datetime
@@ -35,7 +38,9 @@ def game():
             time_string = '1 minute'
         elif 61 < time_delta < 3600:  # Between 1 minute and 1 hour
             time_string = str(time_delta / 60) + ' minutes'
-        else:  # An hour or more
+        elif 3600 <= time_delta < 7201:  # 1 to 1.999999 hours
+            time_string = '1 hour'
+        else:  # Start at 2 hours
             time_string = str(time_delta / 3600) + ' hours'
 
         # Create the chat string base on the results from the last game
