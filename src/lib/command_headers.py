@@ -1,10 +1,13 @@
 from src.config.config import *
 
 commands = {
+
     '!game': {
         'limit': 30,
-        'return': 'game'
-    }
+        'argc': 0,
+        'return': 'command'
+    },
+
 }
 
 for channel in config['channels']:

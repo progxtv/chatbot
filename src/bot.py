@@ -15,6 +15,7 @@ class Roboraj:
         self.irc = irc_.irc(config)
         self.socket = self.irc.get_irc_socket_object()
 
+
     def run(self):
         irc = self.irc
         sock = self.socket
@@ -85,7 +86,7 @@ class Roboraj:
                             )
                             commands.update_last_used(command, channel)
 
-                            resp = '%s' % commands.get_return(command)
+                            resp = '%s' % (commands.get_return(command))
                             commands.update_last_used(command, channel)
 
                             pbot(resp, channel)
