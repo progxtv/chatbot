@@ -27,7 +27,7 @@ def game():
 
         # Count the time since the last game
         game_time = datetime.datetime.fromtimestamp(int(last_match['date']))
-        current_time = datetime.datetime.now()
+        current_time = datetime.datetime.utcnow()
         time_delta = (current_time - game_time).seconds
 
         ## Format the time accordingly
