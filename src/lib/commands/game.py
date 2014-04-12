@@ -53,4 +53,4 @@ def game():
         return chat_string
 
     except URLError:
-        print 'API Timed out. Blame Blizzard!'
+        return 'API Timed out. Blame Blizzard!'
